@@ -1,5 +1,7 @@
 ## Python + FastApi + Hexagonal Arc + DDD
 
+### Inspiração: [Augusto Marinho](https://medium.com/@augustomarinho/arquitetura-hexagonal-no-python-ae08b108ac12) e [ShahriyarR](https://github.com/ShahriyarR/hexagonal-fastapi-jobboard)
+
 ![mainImage](image.webp)
 
 
