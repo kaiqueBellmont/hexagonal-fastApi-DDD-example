@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    restart: always
+    container_name: my_postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: wyd_db
+    ports:
+      - "5434:5432"
+
+  backend:
+    build: .
+    restart: always
+    container_name: wyd_back
+    environment:
+      DATABASE_URL: postgresql://user:password@my_postgres_db:5432/wyd_db
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
